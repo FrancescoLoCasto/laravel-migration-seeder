@@ -26,6 +26,24 @@
                 <h1>
                     {{$train->Azienda}}
                 </h1>
+                <h2>
+                    {{$train->Stazione_di_partenza}}
+                </h2>
+                <h2>
+                     Partenza treno: {{$train->Orario_di_partenza}} , Orario di arrivo: {{$train->Orario_di_arrivo}}
+                </h2>
+                <h4>
+                    {{$train->Codice_treno}}
+                </h4>
+                <h4>
+                    {{$train->Numero_carrozze}}
+                </h4>
+                <h4>
+                    {{$train->In_orario}}
+                </h4>
+                <h4>
+                    {{$train->Cancellato}}
+                </h4>
             </div>
         </div>
         @endforeach
