@@ -16,10 +16,6 @@ class TrainTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        $this ->call([
-            TrainTableSeeder::class
-        ]);
-
         for ($i=0; $i < 100 ; $i++) { 
             $new_train_object = new Train();
             $new_train_object->Azienda = $faker->sentence(5,true);
