@@ -19,31 +19,32 @@
 
 <div class="container">
     <div class="row">
+
         @foreach ($trains as $train )
         <div class="col-12">
             
-            <div class="card">
+            <div class="card text-center">
                 <h1>
-                    {{$train->Azienda}}
+                     Treno:{{$train->Azienda}}
                 </h1>
                 <h2>
-                    {{$train->Stazione_di_partenza}}
+                     Stazione di partenza:{{$train->Stazione_di_partenza}}
                 </h2>
                 <h2>
-                     Partenza treno: {{$train->Orario_di_partenza}} , Orario di arrivo: {{$train->Orario_di_arrivo}}
+                    Partenza treno: {{$train->Orario_di_partenza}} , Orario di arrivo: {{$train->Orario_di_arrivo}}
                 </h2>
-                <h4>
-                    {{$train->Codice_treno}}
-                </h4>
-                <h4>
-                    {{$train->Numero_carrozze}}
-                </h4>
-                <h4>
-                    {{$train->In_orario}}
-                </h4>
-                <h4>
-                    {{$train->Cancellato}}
-                </h4>
+                <h5>
+                    Codice treno:{{$train->Codice_Treno}}
+                </h5>
+                <h5>
+                    Numero di Carrozze:{{$train->Numero_Carrozze}}
+                </h5>
+                <h5>
+                    {{$train->In_orario ? 'No' : 'Si'}}
+                </h5>
+                <h5>
+                    {{$train->Cancellato ? 'No' : 'Si'}}
+                </h5>
             </div>
         </div>
         @endforeach
