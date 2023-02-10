@@ -17,11 +17,15 @@
 
 <body>
 
+    <div class="banner-green">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Transilien-train.svg/1024px-Transilien-train.svg.png" alt="">
+    </div>
+
 <div class="container">
     <div class="row">
 
         @foreach ($trains as $train )
-        <div class="col-12">
+        <div class="col-6 p-4">
             
             <div class="card text-center">
                 <h1>
@@ -40,10 +44,10 @@
                     Numero di Carrozze:{{$train->Numero_Carrozze}}
                 </h5>
                 <h5>
-                    {{$train->In_orario ? 'No' : 'Si'}}
+                    Treno in orario:{{$train->In_orario ? 'Si' : 'No'}}
                 </h5>
                 <h5>
-                    {{$train->Cancellato ? 'No' : 'Si'}}
+                    Treno cancellato:{{$train->Cancellato ? 'Si' : 'No'}}
                 </h5>
             </div>
         </div>
